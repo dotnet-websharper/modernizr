@@ -1,0 +1,11 @@
+<ivy-module version="2.0">
+  <info organisation="IntelliFactory" module="if-ws-modernizr" revision="2.0.0" />
+  <publications>
+    <artifact name="IntelliFactory.WebSharper.Modernizr" type="dll" />
+    <artifact name="IntelliFactory.WebSharper.Modernizr" type="xml" />
+  </publications>
+  <dependencies>
+    <dependency name="if-ws" rev="2.0.6" />
+    <dependency name="if-ws-ig" rev="2.0.6" />
+  </dependencies>
+</ivy-module>
