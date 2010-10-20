@@ -1,11 +1,21 @@
 <ivy-module version="2.0">
-  <info organisation="IntelliFactory" module="if-ws-modernizr" revision="2.0.0" />
+  <info organisation="IntelliFactory" module="if-ws-modernizr" revision="2.0.1" />
+  <configurations>
+    <conf name="build" />
+    <conf name="default" />
+    <conf name="doc" />
+    <conf name="debug" extends="build" />
+  </configurations>
   <publications>
-    <artifact name="IntelliFactory.WebSharper.Modernizr" type="dll" />
-    <artifact name="IntelliFactory.WebSharper.Modernizr" type="xml" />
+    <artifact name="IntelliFactory.WebSharper.Modernizr" type="dll" conf="default" />
+    <artifact name="IntelliFactory.WebSharper.Modernizr" type="xml" conf="default" />
+    <artifact name="IntelliFactory.WebSharper.Modernizr" type="dll.js" conf="default" />
+    <artifact name="IntelliFactory.WebSharper.Modernizr" type="dll.dep" conf="default" />
+    <artifact name="IntelliFactory.WebSharper.Modernizr" type="pdb" conf="debug" />
   </publications>
   <dependencies>
-    <dependency name="if-ws" rev="2.0.6" />
-    <dependency name="if-ws-ig" rev="2.0.6" />
+    <dependency name="if-ws" rev="2.0.9" conf="build->compiler" />
+    <dependency name="if-ws" rev="2.0.9" conf="build->build" />
+    <dependency name="if-ws-ig" rev="2.0.8" conf="build->default" />
   </dependencies>
 </ivy-module>
