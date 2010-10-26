@@ -141,19 +141,25 @@ module Modernizr =
             RenamedGetter "webworkers" T<bool> 2
             RenamedGetter "applicationcache" T<bool> 2
             "svg" =? T<bool>
+            "inlinesvg" =? T<bool>
             "svgclippaths" =? T<bool>
             "smil" =? T<bool>
             "websqldatabase" =? T<bool>
             "indexeddb" =? T<bool>
             RenamedGetter "websockets" T<bool> 2
             RenamedGetter "hashchange" T<bool> 2
-            RenamedGetter "historymanagement" T<bool> 2
+            "history" =? T<bool>
             RenamedGetter "draganddrop" T<bool> 3
-            RenamedGetter "crosswindowmessaging" T<bool> 3
+            RenamedGetter "postmessage" T<bool> 2
             RenamedGetter "audioformat" AudioFormat 2
             RenamedGetter "videoformat" VideoFormat 2
             RenamedGetter "inputtypes" InputType 2
+            RenamedGetter "textshadow" T<bool> 2
+            "touch" =? T<bool>
+            "webgl" =? T<bool>
             "input" =? Input
+            "flexbox" =? T<bool>
+            
         ]
     
     let Assembly =
