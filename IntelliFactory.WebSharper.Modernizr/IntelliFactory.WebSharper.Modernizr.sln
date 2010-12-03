@@ -8,6 +8,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ivy.xml = ivy.xml
 	EndProjectSection
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "IntelliFactory.WebSharper.Modernizr.Documentation", "docs\IntelliFactory.WebSharper.Modernizr.Documentation.fsproj", "{321A8E1B-31CD-4F4D-B3A5-4E00BA90F1BE}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "IntelliFactory.WebSharper.Modernizr.Samples", "samples\IntelliFactory.WebSharper.Modernizr.Samples.fsproj", "{6BA27DDC-C370-4505-941A-DA3F2860E224}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntellliFactory.WebSharper.Modernizr.Tests", "tests\IntelliFactory.WebSharper.Modernizr.Tests.csproj", "{F453CB86-F138-4F1B-A87B-93E1B587E16F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +24,14 @@ Global
 		{235A0D62-E0C5-44E5-AEC1-3F59A4CD760C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{235A0D62-E0C5-44E5-AEC1-3F59A4CD760C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{235A0D62-E0C5-44E5-AEC1-3F59A4CD760C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{321A8E1B-31CD-4F4D-B3A5-4E00BA90F1BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{321A8E1B-31CD-4F4D-B3A5-4E00BA90F1BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{321A8E1B-31CD-4F4D-B3A5-4E00BA90F1BE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{321A8E1B-31CD-4F4D-B3A5-4E00BA90F1BE}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{6BA27DDC-C370-4505-941A-DA3F2860E224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA27DDC-C370-4505-941A-DA3F2860E224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA27DDC-C370-4505-941A-DA3F2860E224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA27DDC-C370-4505-941A-DA3F2860E224}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
