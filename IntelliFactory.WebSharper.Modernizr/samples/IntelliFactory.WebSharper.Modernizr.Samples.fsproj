@@ -51,6 +51,7 @@
     <Reference Include="IntelliFactory.WebSharper.Ecma" />
     <Reference Include="IntelliFactory.WebSharper.Web" />
     <Reference Include="IntelliFactory.Html" />
+    <Reference Include="IntelliFactory.Json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IntelliFactory.WebSharper.Modernizr\IntelliFactory.WebSharper.Modernizr.fsproj">
