@@ -7,7 +7,6 @@
   <publications>
     <artifact name="IntelliFactory.WebSharper.Modernizr" type="bin" ext="dll" conf="default" />
     <artifact name="IntelliFactory.WebSharper.Modernizr" type="doc" ext="xml" conf="default" />
-    <artifact name="IntelliFactory.WebSharper.Modernizr" type="bin" ext="dll.js" conf="default" />
     <artifact name="IntelliFactory.WebSharper.Modernizr" type="bin" ext="dll.dep" conf="default" />
     <artifact name="IntelliFactory.WebSharper.Modernizr" type="debug" ext="pdb" conf="default" />
     <artifact name="IntelliFactory.WebSharper.Modernizr" type="doc" ext="Documentation.zip" conf="default" />
