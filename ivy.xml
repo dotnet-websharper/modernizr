@@ -9,18 +9,16 @@
     <artifact name="IntelliFactory.WebSharper.Modernizr" type="doc" ext="xml" conf="default" />
     <artifact name="IntelliFactory.WebSharper.Modernizr" type="bin" ext="dll.dep" conf="default" />
     <artifact name="IntelliFactory.WebSharper.Modernizr" type="debug" ext="pdb" conf="default" />
-    <artifact name="IntelliFactory.WebSharper.Modernizr" type="doc" ext="Documentation.zip" conf="default" />
+    <artifact name="if-ws-modernizr-docs" type="doc" ext="zip" conf="default" />
   </publications>
   <dependencies>
-    <dependency name="if-ws"     rev="latest.integration" conf="build->compiler" />
-    <dependency name="if-ws"     rev="latest.integration" conf="default->default" />
-    <dependency name="if-ws-ig"  rev="latest.integration" conf="build->default" />
-    
-    <dependency name="if-ws-html"  rev="latest.integration" conf="build->default" />
-    <dependency name="if-ws-web"  rev="latest.integration" conf="build->default" />
-    <dependency name="if-ws-json"  rev="latest.integration" conf="build->default" />
+    <dependency name="if-ws" rev="latest.integration" conf="build->compiler" />
+    <dependency name="if-ws" rev="latest.integration" conf="default->default" />
+    <dependency name="if-ws-ig" rev="latest.integration" conf="build->default" />    
+    <dependency name="if-ws-html" rev="latest.integration" conf="build->default" />
+    <dependency name="if-ws-web" rev="latest.integration" conf="build->default" />
+    <dependency name="if-ws-json" rev="latest.integration" conf="build->default" />
     <dependency name="if-ws-proxy-core" rev="latest.integration" conf="default" />
     <dependency name="if-ws-dom" rev="latest.integration" conf="default" />
-
   </dependencies>
 </ivy-module>
