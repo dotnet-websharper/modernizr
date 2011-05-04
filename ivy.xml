@@ -1,5 +1,5 @@
 <ivy-module version="2.0">
-  <info organisation="IntelliFactory" module="if-ws-modernizr" revision="2.1" />
+  <info organisation="IntelliFactory" module="if-ws-modernizr" revision="2.2" />
   <configurations>
     <conf name="build" />
     <conf name="default" />
