@@ -1,5 +1,5 @@
 <ivy-module version="2.0">
-  <info organisation="IntelliFactory" module="if-ws-modernizr" revision="2.2" />
+  <info organisation="IntelliFactory" module="if-ws-modernizr" revision="2.3" />
   <configurations>
     <conf name="build" />
     <conf name="default" />
@@ -7,7 +7,6 @@
   <publications>
     <artifact name="IntelliFactory.WebSharper.Modernizr" type="bin" ext="dll" conf="default" />
     <artifact name="IntelliFactory.WebSharper.Modernizr" type="doc" ext="xml" conf="default" />
-    <artifact name="IntelliFactory.WebSharper.Modernizr" type="bin" ext="dll.dep" conf="default" />
     <artifact name="IntelliFactory.WebSharper.Modernizr" type="debug" ext="pdb" conf="default" />
     <artifact name="if-ws-modernizr-docs" type="doc" ext="zip" conf="default" />
   </publications>
