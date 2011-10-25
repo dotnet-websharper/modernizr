@@ -9,7 +9,7 @@
 //-----------------------------------------------------------------
 // $end{copyright}
 
-namespace IntelliFactory.WebSharper.Modernizr.Samples
+namespace IntelliFactory.WebSharper.Modernizr.Tests
 
 // open IntelliFactory.WebSharper
 open IntelliFactory.WebSharper
