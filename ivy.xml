@@ -1,5 +1,5 @@
 <ivy-module version="2.0">
-  <info organisation="IntelliFactory" module="if-ws-modernizr-2.4" revision="2.4" />
+  <info organisation="IntelliFactory" module="if-ws-modernizr" revision="2.4" />
   <publications>
     <artifact name="IntelliFactory.WebSharper.Modernizr" type="bin" ext="dll" />
     <artifact name="IntelliFactory.WebSharper.Modernizr" type="debug" ext="pdb" />
@@ -7,7 +7,7 @@
     <artifact name="if-ws-modernizr-docs" type="doc" ext="zip" />
   </publications>
   <dependencies>
-    <dependency name="if-ws-2.4" rev="latest.integration" branch="2.4" />
-    <dependency name="if-ws-ecma-2.4" rev="latest.integration" branch="2.4" />
+    <dependency name="if-ws" rev="latest.integration" />
+    <dependency name="if-ws-ecma" rev="latest.integration" />
   </dependencies>
 </ivy-module>
