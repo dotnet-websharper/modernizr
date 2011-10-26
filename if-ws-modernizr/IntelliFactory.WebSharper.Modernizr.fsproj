@@ -10,7 +10,7 @@
     <Name>IntelliFactory.WebSharper.Modernizr</Name>
     <RootNamespace>$(Name)</RootNamespace>
     <AssemblyName>$(Name)</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,7 +31,7 @@
     <WarningLevel>3</WarningLevel>
     <DocumentationFile>bin\Release\$(Name).XML</DocumentationFile>
   </PropertyGroup>
-  <Import Project="$(INTELLIFACTORY)/build/IntelliFactory.WebSharper.InterfaceGenerator-2.3.targets" />
+  <Import Project="../.build/lib/IntelliFactory.WebSharper.InterfaceGenerator.targets" />
   <ItemGroup>
     <Compile Include="Definition.fs" />
     <Compile Include="Main.fs" />
@@ -44,9 +44,7 @@
     <Reference Include="FSharp.Core" />
     <Reference Include="System" />
     <Reference Include="IntelliFactory.WebSharper" />
+    <Reference Include="IntelliFactory.WebSharper.Core" />
     <Reference Include="IntelliFactory.WebSharper.InterfaceGenerator" />
-    <Reference Include="IntelliFactory.Json" />
-
-
   </ItemGroup>
 </Project>

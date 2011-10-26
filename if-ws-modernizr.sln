@@ -10,6 +10,10 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "IntelliFactory.WebSharper.M
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "IntelliFactory.WebSharper.Modernizr.Documentation", "if-ws-modernizr-docs\IntelliFactory.WebSharper.Modernizr.Documentation.fsproj", "{321A8E1B-31CD-4F4D-B3A5-4E00BA90F1BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "web\Web.csproj", "{F453CB86-F138-4F1B-A87B-93E1B587E16F}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "IntelliFactory.WebSharper.Modernizr.Tests", "if-ws-modernizr-tests\IntelliFactory.WebSharper.Modernizr.Tests.fsproj", "{6BA27DDC-C370-4505-941A-DA3F2860E224}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +28,14 @@ Global
 		{321A8E1B-31CD-4F4D-B3A5-4E00BA90F1BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{321A8E1B-31CD-4F4D-B3A5-4E00BA90F1BE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{321A8E1B-31CD-4F4D-B3A5-4E00BA90F1BE}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{F453CB86-F138-4F1B-A87B-93E1B587E16F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F453CB86-F138-4F1B-A87B-93E1B587E16F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F453CB86-F138-4F1B-A87B-93E1B587E16F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F453CB86-F138-4F1B-A87B-93E1B587E16F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BA27DDC-C370-4505-941A-DA3F2860E224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BA27DDC-C370-4505-941A-DA3F2860E224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BA27DDC-C370-4505-941A-DA3F2860E224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BA27DDC-C370-4505-941A-DA3F2860E224}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
