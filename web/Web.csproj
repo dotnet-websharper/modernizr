@@ -77,8 +77,9 @@
       <Name>IntelliFactory.WebSharper.Modernizr</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <Compile Include="Properties\Properties.cs" />
   </ItemGroup>
   <ProjectExtensions>
     <VisualStudio>
