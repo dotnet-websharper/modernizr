@@ -2,7 +2,7 @@
 //
 // This file is confidential and proprietary.
 //
-// Copyright (c) IntelliFactory, 2004-2010.
+// Copyright (c) IntelliFactory, 2004-2013.
 //
 // All rights reserved.  Reproduction or use in whole or in part is
 // prohibited without the written consent of the copyright holder.
@@ -11,11 +11,16 @@
 
 namespace IntelliFactory.WebSharper.Modernizr
 
+open System
+open System.IO
+open System.Collections.Generic
+open IntelliFactory.WebSharper.InterfaceGenerator
+
 module Renamer =
-    open System.Collections.Generic
-    
-    let Words = 
-        System.IO.File.ReadAllLines "../../words.txt" 
+
+    let Words =
+        Path.Combine(__SOURCE_DIRECTORY__, "words.txt")
+        |> File.ReadAllLines
         |> Set.ofArray
 
     let SplitAt (s:string) (n:int) =
@@ -28,9 +33,9 @@ module Renamer =
     
     let Capitalize (s:string) = 
         s.Substring(0, 1).ToUpper() + s.Substring(1)
-            
+
     let rec ToPascalCase (w: string) (n: int) =
-        if   n <= 1 && Words.Contains w then Capitalize w |> Seq.singleton
+        if n <= 1 && Words.Contains w then Capitalize w |> Seq.singleton
         elif n <= 1 then Seq.empty
         else seq { for (f, l) in Parts w do
                        for c in ToPascalCase f 1 do
@@ -41,11 +46,10 @@ module Renamer =
         match Seq.toList <| ToPascalCase w n with
         | [w] -> w
         | [] -> failwithf "no possible renaming of %s" w
-        | r -> failwith ("Ambiguous renaming: " + r.ToString()) 
+        | r -> failwith ("Ambiguous renaming: " + r.ToString())
 
-module Modernizr =
-    open IntelliFactory.WebSharper.InterfaceGenerator
-    
+module Definition =
+
     let inline RenamedGetter (s: string) (t) (n: int) =
         s =? t |> WithSourceName (Renamer.Rename s n)
 
@@ -57,7 +61,7 @@ module Modernizr =
             "probably" =? Availability
             "notAvailable" =? Availability |> WithGetterInline "''"
         ]
-    
+
     let AudioFormat = 
         let AudioFormat = Class "AudioFormat"
         AudioFormat
@@ -75,8 +79,8 @@ module Modernizr =
             "ogg" =? Availability
             "h264" =? Availability
         ]
-    
-    let InputType =     
+
+    let InputType =
         let InputType = Class "InputType"
         InputType
         |+> Protocol [
@@ -94,8 +98,8 @@ module Modernizr =
             "range" =? T<bool>
             "color" =? T<bool>
         ]
-    
-    let Input =     
+
+    let Input =
         let Input = Class "Input"
         Input
         |+> Protocol [
@@ -110,9 +114,8 @@ module Modernizr =
             "required" =? T<bool>
             "step" =? T<bool>
         ]
-    
-    
-    let Modernizr = 
+
+    let Modernizr =
         Class "Modernizr"
         |+> [
             "fontface" =? T<bool>
@@ -159,12 +162,21 @@ module Modernizr =
             "webgl" =? T<bool>
             "input" =? Input
             "flexbox" =? T<bool>
-            
         ]
-    
+
     let Assembly =
         Assembly [
             Namespace "IntelliFactory.WebSharper.Modernizr" [
                  Modernizr
             ]
+            Namespace "IntelliFactory.WebSharper.Modernizr.Resources" [
+                let r = Resource "Modernizr" "modernizer-1.6.min.js"
+                yield r.AssemblyWide() :> _
+            ]
         ]
+
+module Main =
+
+    [<EntryPoint>]
+    let Start args =
+        Compiler.Create().Start(args, Definition.Assembly)

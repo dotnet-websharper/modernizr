@@ -1,12 +1,7 @@
 <ivy-module version="2.0">
   <info organisation="IntelliFactory" module="if-ws-modernizr" revision="2.5" />
-  <publications>
-    <artifact name="IntelliFactory.WebSharper.Modernizr" type="bin" ext="dll" />
-    <artifact name="IntelliFactory.WebSharper.Modernizr" type="debug" ext="pdb" />
-    <artifact name="IntelliFactory.WebSharper.Modernizr" type="doc" ext="xml" />
-    <artifact name="if-ws-modernizr-docs" type="doc" ext="zip" />
-  </publications>
   <dependencies>
+    <dependency name="build" rev="latest.integration" />
     <dependency name="WebSharper" rev="latest.integration" />
   </dependencies>
 </ivy-module>

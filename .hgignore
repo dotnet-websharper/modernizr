@@ -4,3 +4,5 @@
 Sample
 web/bin
 web/Scripts
+^packages/
+^build/
