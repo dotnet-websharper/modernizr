@@ -1,16 +1,18 @@
 #load "tools/includes.fsx"
+open IntelliFactory.Core
 open IntelliFactory.Build
 
 let bt =
     BuildTool().PackageId("WebSharper.Modernizr", "2.5-alpha").Configure(fun bt ->
         bt
-        |> LogConfig.Current.Custom (LogConfig().Verbose().ToConsole()))
+        |> Logs.Config.Custom (Logs.Default.Verbose().ToConsole()))
 
 let main =
     bt.WebSharper
         .Extension("IntelliFactory.WebSharper.Modernizr")
         .SourcesFromProject()
         .Embed(["modernizr-1.6.min.js"])
+
 
 let tests =
     bt.WebSharper.Library("IntelliFactory.WebSharper.Modernizr.Tests")
@@ -27,7 +29,11 @@ bt.Solution [
     tests
 
     bt.WebSharper.HostWebsite("Website")
-        .References(fun r -> [r.Project tests])
+        .References(fun r ->
+            [
+                r.Project tests
+                r.Project main
+            ])
 
     bt.NuGet.CreatePackage()
         .ProjectUrl("http://bitbucket.org/intellifactory/if-ws-modernizr")

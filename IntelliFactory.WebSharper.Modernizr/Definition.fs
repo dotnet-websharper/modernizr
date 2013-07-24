@@ -170,7 +170,7 @@ module Definition =
                  Modernizr
             ]
             Namespace "IntelliFactory.WebSharper.Modernizr.Resources" [
-                let r = Resource "Modernizr" "modernizer-1.6.min.js"
+                let r = Resource "Modernizr" "modernizr-1.6.min.js"
                 yield r.AssemblyWide() :> _
             ]
         ]

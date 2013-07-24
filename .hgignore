@@ -2,7 +2,8 @@
 [.]build
 .(suo|user)$
 Sample
-web/bin
-web/Scripts
+Website/bin
+Website/Scripts
 ^packages/
 ^build/
+^tools/packages
