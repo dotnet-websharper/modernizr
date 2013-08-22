@@ -175,8 +175,12 @@ module Definition =
             ]
         ]
 
-module Main =
+open IntelliFactory.WebSharper.InterfaceGenerator
 
-    [<EntryPoint>]
-    let Start args =
-        Compiler.Create().Start(args, Definition.Assembly)
+[<Sealed>]
+type ModernizrExtension() =
+    interface IExtension with
+        member ext.Assembly = Definition.Assembly
+
+[<assembly: Extension(typeof<ModernizrExtension>)>]
+do ()
