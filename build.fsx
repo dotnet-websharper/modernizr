@@ -6,6 +6,7 @@ let bt =
     BuildTool().PackageId("WebSharper.Modernizr", "2.5-alpha").Configure(fun bt ->
         bt
         |> Logs.Config.Custom (Logs.Default.Verbose().ToConsole()))
+    |> fun bt -> bt.WithFramework(bt.Framework.Net40)
 
 let main =
     bt.WebSharper
