@@ -37,7 +37,7 @@ bt.Solution [
             ])
 
     bt.NuGet.CreatePackage()
-        .ProjectUrl("http://bitbucket.org/intellifactory/if-ws-modernizr")
+        .ProjectUrl("http://bitbucket.org/intellifactory/websharper.modernizr")
         .Description("WebSharper bindings to the Modernizr library 1.6.")
         .Add(main)
 
