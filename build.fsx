@@ -3,7 +3,7 @@ open IntelliFactory.Core
 open IntelliFactory.Build
 
 let bt =
-    BuildTool().PackageId("WebSharper.Modernizr", "2.5-alpha").Configure(fun bt ->
+    BuildTool().PackageId("WebSharper.Modernizr", "3.0-alpha").Configure(fun bt ->
         bt
         |> Logs.Config.Custom (Logs.Default.Verbose().ToConsole()))
     |> fun bt -> bt.WithFramework(bt.Framework.Net40)
