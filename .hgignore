@@ -1,0 +1,9 @@
+(bin|obj)/(Debug|Release)
+[.]build
+.(suo|user)$
+^Website/bin/
+^Website/Scripts/
+^packages/
+^build/
+^tools/packages/
+^Website/Content/WebSharper/
