@@ -12,7 +12,8 @@
 namespace IntelliFactory.WebSharper.Modernizr.Tests
 
 open IntelliFactory.WebSharper
-open IntelliFactory.WebSharper.Html
+open IntelliFactory.WebSharper.JavaScript
+open IntelliFactory.WebSharper.Html.Client
 open IntelliFactory.WebSharper.Modernizr
 
 [<AutoOpen>]
@@ -39,7 +40,4 @@ type Samples() =
             DisplaySupport "History" Modernizr.History
             DisplaySupport "Video" Modernizr.Video
             DisplaySupport "Webgl" Modernizr.Webgl
-        ] :> IPagelet
-
-
-
+        ] :> _

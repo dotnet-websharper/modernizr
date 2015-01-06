@@ -1,6 +1,6 @@
 ﻿namespace IntelliFactory.WebSharper.Modernizr.Tests
 
-open IntelliFactory.Html
+open IntelliFactory.WebSharper.Html.Server
 open IntelliFactory.WebSharper
 open IntelliFactory.WebSharper.Sitelets
 
