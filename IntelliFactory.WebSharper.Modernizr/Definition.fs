@@ -56,7 +56,7 @@ module Definition =
     let Availability =
         let Availability = Class "Availability"
         Availability
-        |+> [
+        |+> Static [
             "maybe" =? Availability 
             "probably" =? Availability
             "notAvailable" =? Availability |> WithGetterInline "''"
@@ -65,7 +65,7 @@ module Definition =
     let AudioFormat = 
         let AudioFormat = Class "AudioFormat"
         AudioFormat
-        |+> Protocol [
+        |+> Instance [
             "ogg" =? Availability
             "mp3" =? Availability
             "wav" =? Availability
@@ -75,7 +75,7 @@ module Definition =
     let VideoFormat = 
         let VideoFormat = Class "VideoFormat"
         VideoFormat
-        |+> Protocol [
+        |+> Instance [
             "ogg" =? Availability
             "h264" =? Availability
         ]
@@ -83,7 +83,7 @@ module Definition =
     let InputType =
         let InputType = Class "InputType"
         InputType
-        |+> Protocol [
+        |+> Instance [
             "search" =? T<bool>
             "tel" =? T<bool>
             "url" =? T<bool>
@@ -102,7 +102,7 @@ module Definition =
     let Input =
         let Input = Class "Input"
         Input
-        |+> Protocol [
+        |+> Instance [
             "autocomplete" =? T<bool>
             "autofocus" =? T<bool>
             "list" =? T<bool>
@@ -117,7 +117,7 @@ module Definition =
 
     let Modernizr =
         Class "Modernizr"
-        |+> [
+        |+> Static [
             "fontface" =? T<bool>
             "canvas" =? T<bool>
             RenamedGetter "canvastext" T<bool> 2
