@@ -9,12 +9,12 @@
 //-----------------------------------------------------------------
 // $end{copyright}
 
-namespace IntelliFactory.WebSharper.Modernizr
+namespace WebSharper.Modernizr
 
 open System
 open System.IO
 open System.Collections.Generic
-open IntelliFactory.WebSharper.InterfaceGenerator
+open WebSharper.InterfaceGenerator
 
 module Renamer =
 
@@ -166,16 +166,16 @@ module Definition =
 
     let Assembly =
         Assembly [
-            Namespace "IntelliFactory.WebSharper.Modernizr" [
+            Namespace "WebSharper.Modernizr" [
                  Modernizr
             ]
-            Namespace "IntelliFactory.WebSharper.Modernizr.Resources" [
+            Namespace "WebSharper.Modernizr.Resources" [
                 let r = Resource "Modernizr" "modernizr-1.6.min.js"
                 yield r.AssemblyWide() :> _
             ]
         ]
 
-open IntelliFactory.WebSharper.InterfaceGenerator
+open WebSharper.InterfaceGenerator
 
 [<Sealed>]
 type ModernizrExtension() =

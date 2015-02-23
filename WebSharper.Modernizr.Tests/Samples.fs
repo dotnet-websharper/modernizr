@@ -9,12 +9,12 @@
 //-----------------------------------------------------------------
 // $end{copyright}
 
-namespace IntelliFactory.WebSharper.Modernizr.Tests
+namespace WebSharper.Modernizr.Tests
 
-open IntelliFactory.WebSharper
-open IntelliFactory.WebSharper.JavaScript
-open IntelliFactory.WebSharper.Html.Client
-open IntelliFactory.WebSharper.Modernizr
+open WebSharper
+open WebSharper.JavaScript
+open WebSharper.Html.Client
+open WebSharper.Modernizr
 
 [<AutoOpen>]
 module SampleInternals =

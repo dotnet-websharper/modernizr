@@ -8,13 +8,13 @@ let bt =
 
 let main =
     bt.WebSharper
-        .Extension("IntelliFactory.WebSharper.Modernizr")
+        .Extension("WebSharper.Modernizr")
         .SourcesFromProject()
         .Embed(["modernizr-1.6.min.js"])
 
 
 let tests =
-    bt.WebSharper.Library("IntelliFactory.WebSharper.Modernizr.Tests")
+    bt.WebSharper.Library("WebSharper.Modernizr.Tests")
         .SourcesFromProject()
         .References(fun r ->
             [
