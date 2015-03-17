@@ -117,6 +117,13 @@ module Definition =
 
     let Modernizr =
         Class "Modernizr"
+        |=> Nested [
+            Availability
+            AudioFormat
+            VideoFormat
+            Input
+            InputType
+        ]
         |+> Static [
             "fontface" =? T<bool>
             "canvas" =? T<bool>
