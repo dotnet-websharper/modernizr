@@ -22,11 +22,11 @@ module Skin =
             .With("title", fun x -> x.Title)
             .With("body", fun x -> x.Body)
 
-    let WithTemplate title body : Content<Action> =
-        Content.WithTemplate MainTemplate <| fun context ->
+    let WithTemplate title body =
+        Content.WithTemplate MainTemplate
             {
                 Title = title
-                Body = body context
+                Body = body
             }
 
 module Site =
@@ -34,8 +34,8 @@ module Site =
     let ( => ) text url =
         A [HRef url] -< [Text text]
 
-    let HomePage =
-        Skin.WithTemplate "HomePage" <| fun ctx ->
+    let HomePage ctx =
+        Skin.WithTemplate "HomePage"
             [
                 Div [new Samples()]
             ]
