@@ -5,6 +5,7 @@ open IntelliFactory.Build
 let bt =
     BuildTool().PackageId("WebSharper.Modernizr")
         .VersionFrom("WebSharper")
+        .WithFSharpVersion(FSharpVersion.FSharp30)
         .WithFramework(fun fw -> fw.Net40)
 
 let main =
@@ -21,6 +22,7 @@ let tests =
             [
                 r.Project(main)
                 r.Assembly("System.Web")
+                r.NuGet("WebSharper.Html").Reference()
             ])
 
 bt.Solution [
