@@ -22,7 +22,7 @@ let tests =
             [
                 r.Project(main)
                 r.Assembly("System.Web")
-                r.NuGet("WebSharper.Html").Reference()
+                r.NuGet("WebSharper.Html").Latest(true).Reference()
             ])
 
 bt.Solution [
