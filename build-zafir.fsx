@@ -22,7 +22,7 @@ let tests =
             [
                 r.Project(main)
                 r.Assembly("System.Web")
-                r.NuGet("Zafir.Html").Reference()
+                r.NuGet("Zafir.Html").Latest(true).Reference()
             ])
 
 bt.Solution [
