@@ -3,26 +3,26 @@ open IntelliFactory.Core
 open IntelliFactory.Build
 
 let bt =
-    BuildTool().PackageId("Zafir.Modernizr")
-        .VersionFrom("Zafir")
+    BuildTool().PackageId("WebSharper.Modernizr")
+        .VersionFrom("WebSharper")
         .WithFSharpVersion(FSharpVersion.FSharp30)
         .WithFramework(fun fw -> fw.Net40)
 
 let main =
-    bt.Zafir
+    bt.WebSharper4
         .Extension("WebSharper.Modernizr")
         .SourcesFromProject()
         .Embed(["modernizr-1.6.min.js"])
 
 
 let tests =
-    bt.Zafir.Library("WebSharper.Modernizr.Tests")
+    bt.WebSharper4.Library("WebSharper.Modernizr.Tests")
         .SourcesFromProject()
         .References(fun r ->
             [
                 r.Project(main)
                 r.Assembly("System.Web")
-                r.NuGet("Zafir.Html").Latest(true).Reference()
+                r.NuGet("WebSharper.Html").Latest(true).Reference()
             ])
 
 bt.Solution [
@@ -30,7 +30,7 @@ bt.Solution [
     main
     tests
 
-    bt.Zafir.HostWebsite("Website")
+    bt.WebSharper4.HostWebsite("Website")
         .References(fun r ->
             [
                 r.Project tests
@@ -39,7 +39,7 @@ bt.Solution [
 
     bt.NuGet.CreatePackage()
         .ProjectUrl("http://bitbucket.org/intellifactory/websharper.modernizr")
-        .Description("Zafir bindings to the Modernizr library 1.6.")
+        .Description("WebSharper bindings to the Modernizr library 1.6.")
         .Add(main)
 
 ]

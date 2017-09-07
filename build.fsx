@@ -4,7 +4,7 @@ open IntelliFactory.Build
 
 let bt =
     BuildTool().PackageId("WebSharper.Modernizr")
-        .VersionFrom("WebSharper")
+        .VersionFrom("WebSharper", versionSpec = "(,4.0)")
         .WithFSharpVersion(FSharpVersion.FSharp30)
         .WithFramework(fun fw -> fw.Net40)
 
@@ -22,7 +22,7 @@ let tests =
             [
                 r.Project(main)
                 r.Assembly("System.Web")
-                r.NuGet("WebSharper.Html").Latest(true).Reference()
+                r.NuGet("WebSharper.Html").Version("(,4.0)").Reference()
             ])
 
 bt.Solution [
