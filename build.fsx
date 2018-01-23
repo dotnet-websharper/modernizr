@@ -1,46 +1,17 @@
-#load "tools/includes.fsx"
-open IntelliFactory.Core
-open IntelliFactory.Build
+#load "paket-files/build/intellifactory/websharper/tools/WebSharper.Fake.fsx"
+open Fake
+open WebSharper.Fake
 
-let bt =
-    BuildTool().PackageId("WebSharper.Modernizr")
-        .VersionFrom("WebSharper", versionSpec = "(,4.0)")
-        .WithFSharpVersion(FSharpVersion.FSharp30)
-        .WithFramework(fun fw -> fw.Net40)
+let targets =
+    GetSemVerOf "WebSharper"
+    |> ComputeVersion
+    |> WSTargets.Default
+    |> MakeTargets
 
-let main =
-    bt.WebSharper
-        .Extension("WebSharper.Modernizr")
-        .SourcesFromProject()
-        .Embed(["modernizr-1.6.min.js"])
+Target "Build" DoNothing
+targets.BuildDebug ==> "Build"
 
+Target "CI-Release" DoNothing
+targets.CommitPublish ==> "CI-Release"
 
-let tests =
-    bt.WebSharper.Library("WebSharper.Modernizr.Tests")
-        .SourcesFromProject()
-        .References(fun r ->
-            [
-                r.Project(main)
-                r.Assembly("System.Web")
-                r.NuGet("WebSharper.Html").Version("(,4.0)").Reference()
-            ])
-
-bt.Solution [
-
-    main
-    tests
-
-    bt.WebSharper.HostWebsite("Website")
-        .References(fun r ->
-            [
-                r.Project tests
-                r.Project main
-            ])
-
-    bt.NuGet.CreatePackage()
-        .ProjectUrl("http://bitbucket.org/intellifactory/websharper.modernizr")
-        .Description("WebSharper bindings to the Modernizr library 1.6.")
-        .Add(main)
-
-]
-|> bt.Dispatch
+RunTargetOrDefault "Build"
