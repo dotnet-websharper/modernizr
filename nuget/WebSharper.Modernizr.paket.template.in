@@ -1,0 +1,19 @@
+type file
+id WebSharper.Modernizr
+authors
+    IntelliFactory
+owners
+    IntelliFactory
+
+projectUrl http://bitbucket.org/intellifactory/websharper.modernizr
+description
+    WebSharper bindings to the Modernizr library 1.6.
+tags
+    Web JavaScript F# C#
+files
+    ../WebSharper.Modernizr/bin/Release/netstandard2.0/WebSharper.Modernizr.dll ==> lib/net461
+    ../WebSharper.Modernizr/bin/Release/netstandard2.0/WebSharper.Modernizr.xml ==> lib/net461
+    ../WebSharper.Modernizr/bin/Release/netstandard2.0/WebSharper.Modernizr.dll ==> lib/netstandard2.0
+    ../WebSharper.Modernizr/bin/Release/netstandard2.0/WebSharper.Modernizr.xml ==> lib/netstandard2.0
+dependencies
+        WebSharper ~> LOCKEDVERSION/3
