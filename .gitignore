@@ -4,6 +4,5 @@ obj/
 .(suo|user)$
 packages/
 build/
-nuget/*.paket.template
 .fake/
 paket-files/
